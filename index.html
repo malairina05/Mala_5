@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.8/aframe/build/aframe-ar.js"></script>
+    <body style="margin: 0px; overflow: hidden;">
+        <a-scene webx="requiredFeatures: hit-test, local-floor;
+        optionalFeatures: dom-overlay, unbounded;
+        overlayElement:#overlay;">
+            <a-marker preset="hiro">
+                <a-cone color="tomato" radius-bottom="0.5" radius-top="0.2" position="0 0.5 0"></a-cone>
+                <a-sphere color="#68218C" radius="0.3" position="0 0.9 0"></a-sphere>
+                <a-sphere color="#218C52" radius="0.2" position="0 1.2 0"></a-sphere>
+            </a-marker>
+
+            <a-marker preset="kanji">
+                <a-torus position="0 0.3 0" color="#8C2149" radius="0.3" radius-tubular="0.05"
+                animation="property: rotation; to: 360 360 360; loop: true; dur:7000" ></a-torus>
+                <a-torus position="0 0.4 0" color="#8C2121" radius="0.1" radius-tubular="0.05"
+                animation="property: rotation; to: -360 -360 -360; loop: true; dur:7000"></a-torus>
+            </a-marker>
+
+            <a-marker type='pattern' url='https://raw.githubusercontent.com/GeydarovaEsmira/markers/main/pattern-M.patt'>
+                <a-sphere color="#B8890F" radius="0.5" position="0 0 0"></a-sphere>
+                <a-torus color="#611924" radius="0.2" radius-tubular="0.15" position="-0.5 0 0" rotation="90 90 180"></a-torus>
+                <a-torus color="#611924" radius="0.2" radius-tubular="0.15" position="0.5 0 0" rotation="90 90 180"></a-torus>
+                <a-torus color="#611924" radius="0.2" radius-tubular="0.15" position="0 0 0.5" rotation="90 90 180"></a-torus>
+                <a-torus color="#611924" radius="0.2" radius-tubular="0.15" position="0 0 -0.5" rotation="90 90 180"></a-torus>
+                <a-cylinder color="#1BCC14" height="1.5" radius="0.15" position="0 0 1.5" rotation="90 0 180"></a-cylinder>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
